@@ -1,8 +1,6 @@
 Flask==3.0.0
 Flask-CORS==4.0.0
 transformers==4.45.0
-torch==2.14.1
-safetensors==0.4.0
-huggingface-hub>=0.19.3
+torch==2.5.1
+safetensors>=0.4.3
 gunicorn==21.2.0
-
