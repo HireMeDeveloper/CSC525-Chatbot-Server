@@ -50,9 +50,13 @@ app = Flask(__name__)
 CORS(app)
 try:
     tokenizer, model = loadModelAndTokenizer()
-except Exception:
+    print("Model loaded successfully.")
+except Exception as exc:
     tokenizer = None
     model = None
+    print(f"Model load failed: {exc}")
+    import traceback
+    traceback.print_exc()
 
 # Load the rules file
 rulesFile = Path(__file__).parent / "rules.md"
